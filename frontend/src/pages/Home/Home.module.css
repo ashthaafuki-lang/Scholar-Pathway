@@ -1,0 +1,126 @@
+
+.navbar {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px 20px;
+    background-color: rgb(8, 8, 93);
+    color: white;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.description {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.firstPage {
+    background-color: rgb(230, 155, 16);
+    color: white;
+    padding: 50px;
+  
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    margin:5px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px
+}
+
+
+
+.search-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+  
+}
+
+.h6{
+    margin-left:20px;
+    font-weight: bold;
+    color:rgb(91, 24, 145);
+    font-family: 'Arial';
+    margin:44px;
+    font-size: 15px;
+}
+
+.ExploreOurPathways{
+
+    /* font-weight: bold; */ 
+    font-family: 'Arial';
+    text-align: center;
+}
+
+/* .grid {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+} */
+
+.card {
+    display:flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* transition: transform 0.2s; */
+}
+
+.grid{
+    display:flex;
+    
+    align-items: none;
+    justify-content: center;
+    text-align: none;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ExploreOurPathwayspathway{
+    background: rgb(218, 239, 247);
+    padding: 110px 8% 60px;
+    text-align: center;
+}
+
+.footer {
+    background-color: rgb(8, 8, 93);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.ExploreNow {
+    background-color: white;
+    color: rgb(8, 8, 93);
+    font-family: 'Arial';
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}

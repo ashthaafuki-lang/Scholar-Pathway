@@ -7,18 +7,18 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    location: {
+    email: {
       type: String,
       required: true,
-      trim: true,
+      unique: true,
     },
-    website: {
+    password: {
       type: String,
-      trim: true,
+      required: true,
     },
-    courses: {
-      type: [String],
-      default: [],
+    role: {
+      type: String,
+      enum: ["seeker","employer"],
     },
     type: {
       type: String,
