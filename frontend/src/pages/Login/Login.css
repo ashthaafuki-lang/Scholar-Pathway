@@ -1,0 +1,156 @@
+.login-page {
+  display: flex;
+  min-height: 90vh;
+  font-family: Inter, Arial, sans-serif;
+  background: #f7f9fc;
+}
+
+.login-left {
+  flex: 1;
+  background: linear-gradient(150deg, #142b4d, #6655d9);
+  color: white;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.login-left p {
+  color: #cbd5e1;
+  max-width: 400px;
+}
+
+.login-emoji {
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.login-box {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(20, 43, 77, 0.1);
+}
+
+.login-box h1 {
+  margin: 0 0 6px;
+  color: #142b4d;
+}
+
+.login-small {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-small.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-box label {
+  display: block;
+  font-size: 14px;
+  margin: 14px 0 6px;
+}
+
+.login-box input[type='email'],
+.login-box input[type='password'],
+.login-box input[type='text'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.password-row {
+  display: flex;
+  gap: 8px;
+}
+
+.password-row button {
+  border: none;
+  background: #eef1f6;
+  color: #2563eb;
+  padding: 0 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0 20px;
+  font-size: 14px;
+}
+
+.login-options a,
+.login-small a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.remember {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.login-button {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #1d4ed8;
+}
+
+.login-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.login-message {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .login-page {
+    flex-direction: column;
+  }
+  .login-left {
+    padding: 30px 20px;
+  }
+}

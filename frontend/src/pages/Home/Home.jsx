@@ -1,127 +1,129 @@
-import styles from './Home.module.css'
+import './Home.css';
 
-export default function Home() {
-    return(
-        <div>
-            <nav className={styles.navbar}>
-                <div>img</div>
-                <div className={styles.navbar__title}>Scholar Pathway</div>
-                
-               <a href="/">Home</a>
-               <a href="/Course">Courses</a>
-               <a href="/contact">Contact</a>
-               <a href="/Profile">Profile</a>
-               <a href="/Login">Login</a>
-               <a href="/Register">Register</a>
-            </nav>
+/* ---------- data (later you can load this from your API) ---------- */
+const STATS = [
+  ['120+', 'Institutions (sample)'],
+  ['800+', 'Courses (sample)'],
+  ['150+', 'Scholarships (sample)'],
+  ['Free', 'For every student'],
+];
 
-        {/*first page orange color set */}
+const PORTALS = [
+  ['After O/L', 'Search A/L, NVQ, diplomas'],
+  ['After A/L', 'Search degrees and HNDs'],
+  ['Professional', 'Search ACCA, CIMA, AAT'],
+  ['Scholarships', 'Search funding options'],
+  ['Study Abroad', 'UK, Australia, Canada…'],
+  ['IELTS', 'Prepare and book'],
+];
 
-        <div className={styles.firstPage}>
-        <br></br>
-        <center>
-            <p className={styles.description}>
-                <h2>Your Future Starts Here</h2>
-
-                Explore the best education and career pathways after O/L or A/L. Find courses,universities,scholarships and more - all in one place.
-            </p>
-
-            
-       <div className={styles.searchForm}>
-               <h6 className={styles.h6}>Your Pathways</h6>
-               
-                <br></br> 
-             
-        
-                <div class="search-row">
-                    <input id="course" type="text" placeholder="Type Your course" ></input>  
-                    <button type="submit">Submit</button>
-                    </div>
-            </div>
-        </center>
-            <br></br>
-         </div>
-        
-       <p className={styles.ExploreOurPathways}>
-        <h1>Explore Our Pathways</h1> 
-       For Lankan A/L and O/L school student and leavers. </p>
-
-        <div className={styles.ExploreOurPathwayspathway}>
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>Universities</h3> 
-        <p>Find your affordable school for Lanka</p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>Private Institutes</h3> 
-        <p>Explore private university and instutes offering diverse professional streams </p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>VTA & DTET</h3> 
-        <p>Technical and vocational education opportunities for hands-on careers</p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>Scholarships</h3> 
-        <p>Get financial support to fund your education journey</p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>Foreign Education</h3> 
-        <p>Study abroad and explore international university programs</p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        <a className={styles.card} href=""> 
-        <h3>Free Courses</h3> 
-        <p>Learn for free,anywhere </p>
-        </a>
-        </div>
-
-        <div className= {styles.grid}>
-        {/* <a className={styles.card} href="">  */}
-        <h3>Private Institutes</h3>
-        </div>
-
-            <div className={styles.pathways}>
-                <div className={styles.pathway}>
-                    <h3>Engineering</h3> 
-                    <p>Explore the world of engineering and discover the endless possibilities it offers. From designing innovative solutions to building cutting-edge technology, engineering is a field that shapes the future.</p>
-                </div>
-                <div className={styles.pathway}>
-                    <h3>Medicine</h3>
-                    <p>Discover the fascinating world of medicine and healthcare. From diagnosing illnesses to developing life-saving treatments, medicine is a field that requires dedication, compassion, and a thirst for knowledge.</p>
-                </div>
-                <div className={styles.pathway}>
-                    <h3>Business</h3>
-                    <p>Explore the dynamic world of business and entrepreneurship. From managing finances to developing marketing strategies, business is a field that requires creativity, innovation, and a keen understanding of the market.</p>
-                </div>
-            </div> 
-                     
-        <div className={styles.footer}>
-
-            <h2>Not sure what to do next?</h2>
-            <br></br>
-            <p>Let Scholar Pathway guide you to the right path</p>
-            <br />
-            <a class={styles.ExploreNow} href="/course">Explore Now- </a>
-            
-    </div>
-       </div>
-       </div>
-
-        
-    )
+/* ---------- hero illustration ---------- */
+function HeroIllustration() {
+  return (
+    <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice">
+      <rect x="150" y="150" width="200" height="150" fill="#fff" opacity=".9" />
+      <path d="M130 155 250 95l120 60z" fill="#142B4D" />
+      <g fill="#BFD4FF">
+        <rect x="175" y="180" width="26" height="120" />
+        <rect x="237" y="180" width="26" height="120" />
+        <rect x="299" y="180" width="26" height="120" />
+      </g>
+      <circle cx="250" cy="130" r="10" fill="#4AA3DF" />
+      <circle cx="120" cy="340" r="26" fill="#F4C79B" />
+      <path d="M88 334l32-15 32 15-32 13z" fill="#2563EB" />
+      <rect x="92" y="368" width="56" height="90" rx="20" fill="#6655D9" />
+      <circle cx="260" cy="350" r="26" fill="#D9A06E" />
+      <path d="M228 344l32-15 32 15-32 13z" fill="#142B4D" />
+      <rect x="232" y="378" width="56" height="80" rx="20" fill="#4AA3DF" />
+      <rect x="170" y="400" width="60" height="40" rx="6" fill="#F59E0B" />
+    </svg>
+  );
 }
 
+/* ---------- page ---------- */
+export default function Home() {
+  return (
+    <main id="top">
+      {/* HERO */}
+      <div className="hero">
+        <div className="wrap">
+          <div className="visual" aria-hidden="true">
+            <div className="ribbon r1" />
+            <div className="ribbon r2" />
+            <div className="photo"><HeroIllustration /></div>
+          </div>
+
+          <div>
+            <h1>Discover Your Future. <span>Build Your Path.</span></h1>
+            <p className="l">
+              Your complete guide to education and career opportunities after O/L and A/L.
+            </p>
+            <div className="who">
+              <a href="#">
+                <i>🏛️</i>
+                <b>I'm an institution</b>
+                <span>Promote your courses</span>
+              </a>
+              <a href="#">
+                <i>🎓</i>
+                <b>I'm a student</b>
+                <span>Start course search</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* STATS */}
+      <section>
+        <div className="wrap">
+          <div className="stats">
+            {STATS.map(([number, label]) => (
+              <div key={label}>
+                <b>{number}</b>
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FIND YOUR PERFECT COURSE */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="head">
+            <h2>Find your perfect course</h2>
+            <p>Find and compare all your study options in one place.</p>
+          </div>
+          <div className="portals">
+            {PORTALS.map(([title, text]) => (
+              <a className="portal" href="#" key={title}>
+                <div>
+                  <b>{title}</b>
+                  <span>{text}</span>
+                </div>
+                <em>›</em>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI CAREER GUIDE */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="ai">
+            <div>
+              <h2>Let's Discover Your Future Together!</h2>
+              <p>
+                Tell us about your education, interests and dreams. Our AI Career Guide suggests
+                paths. Suggestions are guidance, not verified admission requirements.
+              </p>
+            </div>
+            <a className="btn" href="#">Ask AI Career Guide</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

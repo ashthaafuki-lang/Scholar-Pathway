@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import authRoutes from "./routes/auth.js";
 import connectDB from "./config/db.js";
 
 dotenv.config();
@@ -13,10 +14,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Home 
-app.get("/", (req, res) => {
-  res.send("Welcome to Scholar Pathway Backend!");
+app.get('/', (req, res) => {
+  res.send('Welcome to the Scholar Pathway API');
 });
+
+// Home 
+// app.use("/api/auth/register", authRoutes);
+
+app.use("/api/auth", authRoutes);
 
 // Test API route
 app.get("/api/test", (req, res) => {
@@ -25,6 +30,7 @@ app.get("/api/test", (req, res) => {
     message: "Scholar Pathway API is working!",
   });
 });
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
